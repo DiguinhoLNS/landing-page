@@ -7,7 +7,6 @@ const homeRoutes: RouteType[] = [
         path: 'home',
         title: 'Home',
         icon: mdiHome,
-        userVerification: true,
     }
 ]
 

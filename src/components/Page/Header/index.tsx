@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { mdiAccount, mdiBrightness4, mdiBrightness5, mdiLogout, mdiMenu } from '@mdi/js'
+import { mdiBrightness4, mdiBrightness5, mdiMenu } from '@mdi/js'
 import { ROUTE_INDEX } from '@config/.'
 import { toggleTheme } from '@modules/theme/reducers/themeReducer'
-import { setAuthLogout } from '@modules/auth/reducers/authReducer'
 import { toggleSidebar } from '@modules/app/reducers/appReducer'
 import { useAppDispatch, useAppSelector } from '@redux/hooks'
 import './styles.scss'
 import HeaderContent from './Content'
 import HeaderOption from './Option'
+import HeaderIndicator from './Indicator'
 
 const Header: React.FC = () => {
 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                 </HeaderContent>
                 <HeaderContent name = "logo">
                     <Link to = {ROUTE_INDEX}>
-                        
+                        Rodrigo Santos
                     </Link>
                 </HeaderContent>
                 <HeaderContent name = "blank" />
@@ -39,18 +39,9 @@ const Header: React.FC = () => {
                         tooltip = {theme === 'dark-mode' ? 'Tema claro' : 'Tema escuro'}
                         onClick = {() => dispatch(toggleTheme())}
                     />
-                    <HeaderOption
-                        icon = {mdiLogout}
-                        tooltip = "Sair"
-                        onClick = {() => dispatch(setAuthLogout())}
-                    />
-                    <HeaderOption
-                        icon = {mdiAccount}
-                        tooltip = {'Conta'}
-                        onClick = {() => {}}
-                    />
                 </HeaderContent>
             </ul>
+            <HeaderIndicator />
         </header>
 
     )

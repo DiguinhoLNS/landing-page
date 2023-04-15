@@ -8,7 +8,7 @@ interface State {
 }
 
 const initialState: State = {
-    sidebarOpen: true,
+    sidebarOpen: false,
     sidebarSections: {}
 }
 
