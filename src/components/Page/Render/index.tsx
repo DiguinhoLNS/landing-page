@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import './styles.scss'
-import { PageRenderProps } from './types'
-import { useAppSelector } from '../../../redux/hooks'
-import RenderRoutePage from '../../../routes/components/RenderRoutePage'
-import createClassName from '../../../utils/createClassName'
+import { useAppSelector } from '@redux/hooks'
+import RenderRoutePage from '@routes/components/RenderRoutePage'
+import createClassName from '@utils/createClassName'
+import Layout from '../../Layout'
 import ScrollReset from '../../Common/ScrollReset'
 import SnackbarAlert from '../../Feedback/SnackbarAlert'
-import Layout from '../../Layout'
+import './styles.scss'
+import { PageRenderProps } from './types'
 
 const PageRender: React.FC <PageRenderProps> = ({ children, pageKey, ...props }) => {
 
@@ -20,7 +20,7 @@ const PageRender: React.FC <PageRenderProps> = ({ children, pageKey, ...props })
 
     return(
 
-        <div id = "wrapper" className = {wrapperClasses}>
+        <div id = "wrapper" className = {wrapperClasses} data-page = {props.path}>
             <ScrollReset />
             {(['center', 'error', 'form'].includes(props.type ?? 'default') && (
                 <Layout.Center name = {props.name ?? ''}>

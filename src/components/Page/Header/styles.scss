@@ -114,7 +114,7 @@ header {
         #headerIndicatorBarMask {
             height: 100%;
             background-color: var(--color-layout-header);
-            transition: var(--transition-theme);
+            transition: width 0.5s ease-in-out;
         }
 
     }

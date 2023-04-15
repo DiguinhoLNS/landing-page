@@ -1,0 +1,42 @@
+[data-page = home]{
+
+    section {
+
+        &.sectionWelcome {
+            
+        }
+
+        #welcomeMessage {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            height: calc(100vh - var(--layout-header-height) - (2 * var(--layout-padding)));
+
+            .memojiContainer {
+                flex: 1;
+            }
+
+            .textContainer {
+                flex: 1;
+                
+                h1 {
+                    color: var(--color-text-p);
+                    font-size: 40px;
+                    
+                    span {
+                        font-family: 'Courier New', monospace;
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+}

@@ -17,8 +17,8 @@ const config = {
 }
 
 const APP_VERSION = {
-    NAME: '1.0.0-Boilerplate',
-    RELEASE_DATE: '00/00/0000',
+    NAME: '1.0.0-Dev',
+    RELEASE_DATE: '14/04/2023',
 }
 
 const ROUTE_INDEX = '/home'

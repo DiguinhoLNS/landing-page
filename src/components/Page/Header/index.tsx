@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                 </HeaderContent>
                 <HeaderContent name = "logo">
                     <Link to = {ROUTE_INDEX}>
-                        Rodrigo Santos
+                        Rodrigo
                     </Link>
                 </HeaderContent>
                 <HeaderContent name = "blank" />
