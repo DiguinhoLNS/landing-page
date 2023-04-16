@@ -3,37 +3,73 @@
     section {
 
         &.sectionWelcome {
+
+            #welcomeMessage {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+                width: 100%;
+                height: calc(100vh - var(--layout-header-height) - (2 * var(--layout-padding)));
+    
+                .memojiContainer {
+                    flex: 1;
+                }
+    
+                .textContainer {
+                    flex: 1;
+                    
+                    h1 {
+                        color: var(--color-text-p);
+                        font-size: 40px;
+                        
+                        span {
+                            font-family: 'Courier New', monospace;
+                        }
+    
+                    }
+    
+                }
+    
+    
+            }
             
         }
 
-        #welcomeMessage {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-            width: 100%;
-            height: calc(100vh - var(--layout-header-height) - (2 * var(--layout-padding)));
+        &.sectionSocial {
 
-            .memojiContainer {
-                flex: 1;
-            }
+            .socialBoxGroup {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+                grid-auto-rows: 1fr;
+                width: 100%;
 
-            .textContainer {
-                flex: 1;
-                
-                h1 {
-                    color: var(--color-text-p);
-                    font-size: 40px;
+                .boxSocial {
+                    display: flex;
+                    aspect-ratio: 1;
                     
-                    span {
-                        font-family: 'Courier New', monospace;
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1;
+                        padding: 24px;
+    
+                        &:hover {
+                            background-color: var(--color-action-hover-lm);
+                        }
+    
+                        svg  path {
+                            fill: var(--color-text-p-dm) !important;
+                        }
+    
                     }
-
+    
                 }
 
             }
-
 
         }
 

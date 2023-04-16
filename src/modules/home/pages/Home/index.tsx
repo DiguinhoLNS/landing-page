@@ -1,44 +1,23 @@
 import React from 'react'
-import Typewriter from 'typewriter-effect'
+import SectionHomeWelcome from './components/Section/Welcome'
+import SectionHomeAbout from './components/Section/About'
+import SectionHomeWork from './components/Section/Work'
+import SectionHomeProjects from './components/Section/Projects'
+import SectionHomeSetup from './components/Section/Setup'
+import SectionHomeSocial from './components/Section/Social'
 import './styles.scss'
-import Section from '@components/Page/Section'
-import typeWriterText from './scripts/typewriter'
 
 const Home: React.FC = () => {
 
     return(
 
         <>
-            <Section name = "welcome" direction = "row" align = "between">
-                <div id = "welcomeMessage">
-                    <div className = "memojiContainer">
-                        espaço para avatar
-                    </div>
-                    <div className = "textContainer">
-                        <h1>
-                            <Typewriter
-                                options = {{
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                                onInit = {typeWriterText}
-                            />
-                        </h1>
-                    </div>
-                </div>
-            </Section>
-            <Section name = "study">
-                
-            </Section>
-            <Section name = "work">
-                
-            </Section>
-            <Section name = "projects">
-                
-            </Section>
-            <Section name = "social">
-                
-            </Section>
+            <SectionHomeWelcome />
+            <SectionHomeAbout />
+            <SectionHomeWork />
+            <SectionHomeProjects />
+            <SectionHomeSetup />
+            <SectionHomeSocial />
         </>
 
     )

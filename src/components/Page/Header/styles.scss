@@ -25,7 +25,8 @@ header {
                 a {
                     color: var(--color-text-p);
                     font-size: 30px;
-                    font-family: 'Brush Script MT', cursive;
+
+                    transition: var(--transition-theme);
                 }
 
                 img {

@@ -2,7 +2,7 @@ export default function getScrolled(setScroll: React.Dispatch<React.SetStateActi
     const main = document.querySelector('main')!
 
     const scrollPx = main.scrollTop
-    const winHeightPx = main.scrollHeight - document.documentElement.clientHeight
+    const winHeightPx = main.scrollHeight - document.documentElement.clientHeight + 60
     const scrolled = scrollPx / winHeightPx * 100
 
     setScroll(scrolled)
