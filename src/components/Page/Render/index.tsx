@@ -12,7 +12,7 @@ const PageRender: React.FC <PageRenderProps> = ({ children, pageKey, ...props })
 
     const { sidebarOpen } = useAppSelector(s => s.app)
 
-    const wrapperClasses = createClassName([props.type ?? 'default'], [sidebarOpen && 'sidebar-open'])
+    const wrapperClasses = createClassName([props.type ?? 'default', 'overlayScroll'], [sidebarOpen && 'sidebar-open'])
 
     useEffect(() => {
         document.title = props.title ?? 'Title Not Provided'

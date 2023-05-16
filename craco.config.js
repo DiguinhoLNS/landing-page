@@ -7,6 +7,7 @@ module.exports = {
             '@config': path.resolve(__dirname, 'src/config'),
             '@constants': path.resolve(__dirname, 'src/constants'),
             '@env': path.resolve(__dirname, 'src/env'),
+            '@hooks': path.resolve(__dirname, 'src/hooks'),
             '@interfaces': path.resolve(__dirname, 'src/interfaces'),
             '@mock': path.resolve(__dirname, 'src/mock'),
             '@modules': path.resolve(__dirname, 'src/modules'),

@@ -9,9 +9,13 @@ const HeaderIndicator: React.FC = () => {
     const indicatorClasses = createClassName('', [scroll === 100 && 'full', scroll > 0 && 'scrolled'])
 
     useEffect(() => {
-        const main = document.querySelector('main')!
-        main.addEventListener('scroll', () => getScrolled(setScroll))
-        return () => {main.removeEventListener('scroll', () => {})}   
+        const wrapper = document.querySelector('#wrapper')!
+
+        wrapper.addEventListener('scroll', () => getScrolled(setScroll))
+        
+        return () => {
+            wrapper.removeEventListener('scroll', () => {})
+        }   
     }, [])
 
     return(

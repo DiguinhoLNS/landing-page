@@ -1,35 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { mdiBrightness4, mdiBrightness5, mdiMenu } from '@mdi/js'
+import Typewriter from 'typewriter-effect'
+import { mdiBrightness4, mdiBrightness5 } from '@mdi/js'
 import { ROUTE_INDEX } from '@config/.'
+import useScrollDirection from '@hooks/useScrollDirection'
 import { toggleTheme } from '@modules/theme/reducers/themeReducer'
-import { toggleSidebar } from '@modules/app/reducers/appReducer'
 import { useAppDispatch, useAppSelector } from '@redux/hooks'
+import createClassName from '@utils/createClassName'
 import './styles.scss'
-import HeaderContent from './Content'
+import typeWriterText from './scripts/typewriter'
 import HeaderOption from './Option'
+import HeaderContent from './Content'
 import HeaderIndicator from './Indicator'
 
 const Header: React.FC = () => {
 
     const dispatch = useAppDispatch()
-    const { sidebarOpen } = useAppSelector(s => s.app)
     const { theme } = useAppSelector(s => s.theme)
+
+    const test = useScrollDirection()
+    const headerClasses = createClassName(['header', test])
 
     return(
 
-        <header>
+        <header className = {headerClasses}>
             <ul id = "headerContainer">
-                <HeaderContent name = "menu">
-                    <HeaderOption
-                        icon = {mdiMenu}
-                        tooltip = {sidebarOpen ? 'Fechar menu' : 'Abrir menu'}
-                        onClick = {() => dispatch(toggleSidebar())}
-                    />
-                </HeaderContent>
                 <HeaderContent name = "logo">
                     <Link to = {ROUTE_INDEX}>
-                        Rodrigo
+                        <Typewriter
+                            options = {{
+                                autoStart: true,
+                                loop: true,
+                            }}
+                            onInit = {typeWriterText}
+                        />
                     </Link>
                 </HeaderContent>
                 <HeaderContent name = "blank" />

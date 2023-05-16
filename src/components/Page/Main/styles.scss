@@ -16,7 +16,7 @@ main {
     &.default {
 
         main {
-            height: calc(100vh - var(--layout-header-height));
+            //height: calc(100vh - var(--layout-header-height));
 
             #mainContainer {
                 height: 100%;

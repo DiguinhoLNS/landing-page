@@ -6,6 +6,7 @@
             "@config/*": ["./src/config/*"],
             "@constants/*": ["./src/constants/*"],
             "@env/*": ["./src/env/*"],
+            "@hooks/*": ["./src/hooks/*"],
             "@interfaces/*": ["./src/interfaces/*"],
             "@mock/*": ["./src/mock/*"],
             "@modules/*": ["./src/modules/*"],
