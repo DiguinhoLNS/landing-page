@@ -5,6 +5,5 @@ export type HeaderContentProps = {
 export type HeaderOptionProps = {
     icon: string
     label?: string
-    tooltip: string
     onClick: (() => void)
 }

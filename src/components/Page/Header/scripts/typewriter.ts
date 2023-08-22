@@ -12,7 +12,5 @@ export default function typeWriterText(typewriter: TypewriterClass){
     textName('Rodrigo', typewriter)
     textName('Diguinho', typewriter)
     textName('Digo', typewriter)
-    textName('Rodrigão', typewriter)
-    textName('Rodriguinho', typewriter)
     textName('Digão', typewriter)
 }

@@ -5,7 +5,7 @@ const homeRoutes: RouteType[] = [
     {
         key: 'home',
         path: 'home',
-        title: 'Home',
+        title: 'Rodrigo Santos',
         icon: mdiHome,
     }
 ]

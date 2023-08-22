@@ -23,7 +23,7 @@ const authSlice = createSlice({
     reducers: {
         setAuthLogin: (state, action: PayloadAction<UserData>) => {
             storage.setObject('user',action.payload)
-            storage.setItem('flagSysten', ENV.FLAG_SYSTEN)
+            storage.setItem('flagSystem', ENV.FLAG_SYSTEM)
 
             state.userData = action.payload
             state.loading = false

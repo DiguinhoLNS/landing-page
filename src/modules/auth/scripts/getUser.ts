@@ -7,10 +7,10 @@ import { setAuthLoading, setAuthLogin } from '../reducers/authReducer'
 export default function getUser(dispatch: Function){
     try {
         const localUser = storage.getObject<UserData>('user')
-        const localFlagSysten = storage.getItem<string>('flagSysten')
+        const localFlagSystem = storage.getItem<string>('flagSystem')
         
         if(!!localUser && !!localUser.login){
-            if((!!localFlagSysten && localFlagSysten === ENV.FLAG_SYSTEN) || process.env.NODE_ENV === 'production'){
+            if((!!localFlagSystem && localFlagSystem === ENV.FLAG_SYSTEM) || process.env.NODE_ENV === 'production'){
                 dispatch(setAuthLogin(localUser))
             }else throw new Error('Flag Systen not found')
         }else throw new Error('User not found')

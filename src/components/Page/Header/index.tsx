@@ -40,7 +40,6 @@ const Header: React.FC = () => {
                 <HeaderContent name = "options">
                     <HeaderOption
                         icon = {theme === 'dark-mode' ? mdiBrightness5 : mdiBrightness4}
-                        tooltip = {theme === 'dark-mode' ? 'Tema claro' : 'Tema escuro'}
                         onClick = {() => dispatch(toggleTheme())}
                     />
                 </HeaderContent>

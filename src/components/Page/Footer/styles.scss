@@ -1,0 +1,45 @@
+footer {
+
+    #footerContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 48px 64px;
+
+        .footerContent {
+
+            &.copyright {
+
+                span {
+                    color: var(--color-text-t);
+                }
+    
+            }
+    
+            &.links {
+                display: flex;
+                flex-direction: row;
+                gap: 8px 24px;
+
+                a {
+                    color: var(--color-text-t);
+
+                    &:hover {
+                        color: var(--color-text-p);
+                    }
+
+                }
+    
+            }
+    
+            span, a {
+                font-size: 14px;
+
+                transition: var(--transition-theme);
+            }
+            
+        }
+
+    }
+
+}

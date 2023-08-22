@@ -1,5 +1,5 @@
 import { RoutePageType } from "@routes/interfaces"
-import Home from "./Home"
+import Home from "./pages/Home"
 
 const homePages: RoutePageType[] = [
     {key: 'home', element: Home}
